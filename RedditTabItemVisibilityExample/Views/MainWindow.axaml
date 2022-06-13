@@ -17,7 +17,7 @@
             <Button
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
-                Command="{Binding ToggleMoreContentCommand}"
+                Command="{Binding ToggleMoreContentCommand, Mode=OneTime}"
             >
                 Toggle More Content
             </Button>

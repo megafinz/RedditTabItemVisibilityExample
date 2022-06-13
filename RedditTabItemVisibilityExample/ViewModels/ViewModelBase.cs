@@ -1,8 +1,7 @@
 ﻿using ReactiveUI;
 
-namespace RedditTabItemVisibilityExample.ViewModels
+namespace RedditTabItemVisibilityExample.ViewModels;
+
+public class ViewModelBase : ReactiveObject
 {
-    public class ViewModelBase : ReactiveObject
-    {
-    }
 }
