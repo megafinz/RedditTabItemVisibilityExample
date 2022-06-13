@@ -1,0 +1,36 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:RedditTabItemVisibilityExample.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="RedditTabItemVisibilityExample.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="RedditTabItemVisibilityExample">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+    <TabControl>
+        <TabItem Header="Tab Item 1">
+            <Button
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Command="{Binding ToggleMoreContentCommand}"
+            >
+                Toggle More Content
+            </Button>
+        </TabItem>
+        
+        <TabItem Header="Tab Item 2" IsVisible="{Binding HasMoreContent, Mode=OneWay}">
+            <TextBlock
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+            >
+                More Content
+            </TextBlock>
+        </TabItem>
+    </TabControl>
+
+</Window>
